@@ -13,6 +13,8 @@ shinyUI(
                             
                         mainPanel(
                              h4('Unemployment rate by year', align = "center"),
+                             verbatimTextOutput("filterSex"),
+                             verbatimTextOutput("filterEdu"),
                              chartOutput("unemploymentByYear", lib = "nvd3"),
                              h4('Table with filtered dataset', align = "center"),
                              verbatimTextOutput("outp")

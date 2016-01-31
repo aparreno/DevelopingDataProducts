@@ -45,7 +45,8 @@ shinyServer(function(input, output, session) {
     })
     
     output$outp <- renderPrint({dataSelected()})
-    
+    output$filterSex <- renderPrint({input$sex})
+    output$filterEdu <- renderPrint({input$education})
     # Events by year
     output$unemploymentByYear <- renderChart2({
         data$TIME <- as.character(data$TIME)
@@ -54,6 +55,7 @@ shinyServer(function(input, output, session) {
         m1$yAxis( axisLabel = "Unemployment Rate (%)", width = 80)
         m1$xAxis( axisLabel = "Year", width = 70)
         m1$set(dom= "plot")
+        
         m1
     })
 })
