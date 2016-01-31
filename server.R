@@ -1,5 +1,4 @@
 # libraries 
-library(ggplot2)
 library(rCharts)
 library(ggvis)
 library(stringr)
@@ -55,7 +54,6 @@ shinyServer(function(input, output, session) {
         m1$yAxis( axisLabel = "Unemployment Rate (%)", width = 80)
         m1$xAxis( axisLabel = "Year", width = 70)
         m1$set(dom= "plot")
-        
         m1
     })
 })
